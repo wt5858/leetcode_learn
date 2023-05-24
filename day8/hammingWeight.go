@@ -48,6 +48,7 @@ func main() {
 func hammingWeight(num uint32) int {
 	res := 0
 	for i := 0; i < 32; i++ {
+		// 按位左移i位，然后与num进行位与运算  如果num对应位置的值是1，那逻辑与运算的结果就是1
 		if 1<<i&num > 0 {
 			res++
 		}
